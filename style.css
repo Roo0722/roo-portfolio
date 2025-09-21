@@ -615,50 +615,6 @@ body {
     }
 }
 
-/* Cisco and IBM Logo Styles */
-.certificate-icon {
-    font-size: 2rem;
-    color: #00ffc8;
-    min-width: 60px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* General SVG/Font Awesome sizing */
-.certificate-icon i,
-.certificate-icon svg {
-    width: 32px;
-    height: 32px;
-    transition: all 0.3s ease;
-}
-
-/* Default Cisco & IBM logo styling */
-.cisco-logo,
-.ibm-logo {
-    width: 32px;
-    height: 32px;
-    fill: currentColor;
-    color: #00ffc8; /* inherit teal */
-}
-
-/* Hover effect for all icons */
-.certificate-item:hover .certificate-icon svg,
-.certificate-item:hover .certificate-icon i {
-    color: #00ffc8;
-    transform: scale(1.1);
-    filter: drop-shadow(0 0 6px #00ffc8);
-}
-
-/* Ensure Font Awesome icons keep their font-size */
-.certificate-icon i.fab,
-.certificate-icon i.fas {
-    font-size: 2rem;
-    width: auto;
-    height: auto;
-}
-
 /* Add these styles to your existing style.css file */
 
 /* Enhanced Logo Styles */
