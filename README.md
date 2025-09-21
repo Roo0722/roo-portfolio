@@ -8,7 +8,7 @@
 
 > ### ***1. Detailed Design Brief and Mood Board (Gemini)***
 
-> The process starts by generating a comprehensive design brief. Instead of a single high-level prompt, use Gemini to define a specific visual direction, including a color palette (with hex codes), font pairings, and a list of desired modern design elements and subtle animations.
+>> The process starts by generating a comprehensive design brief. Instead of a single high-level prompt, use Gemini to define a specific visual direction, including a color palette (with hex codes), font pairings, and a list of desired modern design elements and subtle animations.
 
 > ### ***2. Modular Prompting for Each Section (ChatGPT)***
 
