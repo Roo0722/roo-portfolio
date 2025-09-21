@@ -27,3 +27,5 @@ The project began with a core concept and is now refined into a more granular pr
 > The final generated code is a complete, single-file website. The last step is to use either Gemini or ChatGPT to perform a final review. Instruct the AI to optimize the code for performance, add clear and detailed comments for future updates, and double-check for any accessibility considerations (WCAG compliance). This final polish ensures the website is not only visually impressive but also technically sound and easy to maintain.
 
 This unique workflow demonstrates how a more deliberate, multi-step prompting strategy can lead to a demonstrably better result by providing a higher level of detail and control at each stage of the development process.
+
+Check out my portfolio [here](https://roo0722.github.io/roo-portfolio/).
