@@ -614,15 +614,55 @@ body {
         padding: 0 1rem;
     }
 }
-    /* SVG logos styled like Font Awesome icons */
-    .logo-icon {
-        width: 40px;
-        height: auto;
-        fill: #00ffc8; /* match your neon green */
-        transition: transform 0.3s ease, fill 0.3s ease;
+
+/* Add these styles to your existing style.css file */
+
+/* Cisco and IBM Logo Styles */
+.cisco-logo,
+.ibm-logo {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
 }
 
-    .logo-icon:hover {
-        transform: scale(1.1);
-        fill: #00ffea; /* lighter neon on hover */
+.certificate-icon .cisco-logo,
+.certificate-icon .ibm-logo {
+    width: 32px;
+    height: 32px;
+}
+
+/* Ensure SVG logos inherit the teal color */
+.certificate-icon svg {
+    color: #00ffc8;
+    transition: all 0.3s ease;
+}
+
+.certificate-item:hover .certificate-icon svg {
+    color: #00ffc8;
+    transform: scale(1.1);
+}
+
+/* Make sure all certificate icons have consistent sizing */
+.certificate-icon {
+    font-size: 2rem;
+    color: #00ffc8;
+    min-width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.certificate-icon i,
+.certificate-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Ensure Font Awesome icons maintain their size */
+.certificate-icon i.fab,
+.certificate-icon i.fas {
+    font-size: 2rem;
+    width: auto;
+    height: auto;
 }
