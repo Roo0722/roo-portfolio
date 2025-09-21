@@ -1,7 +1,7 @@
-#AI-Powered Web Development Workflow
+#***AI-Powered Web Development Workflow***
 This document outlines an advanced, step-by-step process used to create a professional portfolio website. This enhanced workflow leverages a multi-AI collaborative, iterative loop to achieve a higher-quality result, to create an exceptional outcome, driven by a pursuit of continuous quality improvement.
 
-##The Workflow: A Multi-AI Approach for Superior Results
+##***The Workflow: A Multi-AI Approach for Superior Results***
 The project began with a core concept and is now refined into a more granular process, with each AI tool playing a distinct and specialized role to ensure a top-tier final product.
 
 Detailed Design Brief and Mood Board (Gemini)
