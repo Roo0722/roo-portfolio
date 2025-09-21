@@ -6,7 +6,7 @@
 
 > The project began with a core concept and is now refined into a more granular process, with each AI tool playing a distinct and specialized role to ensure a top-tier final product.
 
-| ### ***1. Detailed Design Brief and Mood Board (Gemini)***
+|    ### ***1. Detailed Design Brief and Mood Board (Gemini)***
 
 > The process starts by generating a comprehensive design brief. Instead of a single high-level prompt, use Gemini to define a specific visual direction, including a color palette (with hex codes), font pairings, and a list of desired modern design elements and subtle animations.
 
