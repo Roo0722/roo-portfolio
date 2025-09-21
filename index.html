@@ -4,493 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodolfo Laplana Abando Jr. - Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #111111;
-            color: #ffffff;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: rgba(17, 17, 17, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 255, 200, 0.2);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-        }
-
-        .nav-links a:hover {
-            color: #00ffc8;
-            background-color: rgba(0, 255, 200, 0.1);
-        }
-
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            background: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 200, 0.1) 0%, transparent 70%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #ffffff 0%, #00ffc8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: #00ffc8;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .hero .intro {
-            font-size: 1.1rem;
-            color: #cccccc;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
-            margin-top: 80px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #00ffc8;
-            font-weight: 600;
-        }
-
-        /* About Section */
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            font-size: 1.1rem;
-            color: #cccccc;
-            line-height: 1.8;
-        }
-
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .skill-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 200, 0.2);
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #00ffc8;
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-        }
-
-        .skill-card h3 {
-            color: #00ffc8;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        /* Experience Section */
-        .experience-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .experience-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 200, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-            border-color: #00ffc8;
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-        }
-
-        .experience-card h3 {
-            color: #00ffc8;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .experience-card .company {
-            color: #ffffff;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .experience-card .period {
-            color: #999999;
-            font-size: 0.9rem;
-        }
-
-        /* Projects Section */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 200, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            border-color: #00ffc8;
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-        }
-
-        .project-card h3 {
-            color: #00ffc8;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-
-        .project-card p {
-            color: #cccccc;
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .project-link {
-            display: inline-block;
-            color: #00ffc8;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border: 1px solid #00ffc8;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
-
-        .project-link:hover {
-            background-color: #00ffc8;
-            color: #111111;
-        }
-
-        /* Certificates Section */
-        .certificates-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .certificate-item {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 200, 0.2);
-            transition: all 0.3s ease;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .certificate-item:hover {
-            transform: translateY(-3px);
-            border-color: #00ffc8;
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-        }
-
-        .certificate-info h3 {
-            color: #00ffc8;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .certificate-info .period {
-            color: #999999;
-            font-size: 0.9rem;
-        }
-
-        .certificate-link {
-            color: #00ffc8;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border: 1px solid #00ffc8;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            white-space: nowrap;
-        }
-
-        .certificate-link:hover {
-            background-color: #00ffc8;
-            color: #111111;
-        }
-
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            background: linear-gradient(135deg, #1a1a1a 0%, #222222 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 255, 200, 0.2);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .contact-item:hover {
-            transform: translateY(-5px);
-            border-color: #00ffc8;
-            box-shadow: 0 10px 30px rgba(0, 255, 200, 0.2);
-        }
-
-        .contact-item h3 {
-            color: #00ffc8;
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-        }
-
-        .contact-link {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .contact-link:hover {
-            color: #00ffc8;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #0a0a0a;
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(0, 255, 200, 0.2);
-            color: #999999;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                flex-wrap: wrap;
-                gap: 1rem;
-                justify-content: center;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .skills-grid,
-            .experience-grid,
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .certificate-item {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .container {
-                padding: 0 1rem;
-            }
-
-            section {
-                padding: 3rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav-links {
-                gap: 0.5rem;
-            }
-
-            .nav-links a {
-                padding: 0.3rem 0.5rem;
-                font-size: 0.9rem;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .project-card,
-            .experience-card,
-            .skill-card,
-            .certificate-item,
-            .contact-item {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#certificates">Certificates</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Rodolfo Laplana Abando Jr.</h1>
-            <p class="subtitle">Cybersecurity & Technology Enthusiast</p>
-            <p class="intro">Former maritime professional transitioning into technology and cybersecurity.</p>
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content fade-up">
+            <h1 class="hero-title">Rodolfo Laplana Abando Jr.</h1>
+            <p class="hero-subtitle">Cybersecurity & Technology Enthusiast</p>
+            <p class="hero-intro">Former maritime professional transitioning into technology and cybersecurity.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                <p>I am a former maritime professional transitioning into cybersecurity and IT. Skilled in navigation, operations, networking, and cybersecurity with a growing focus on AI.</p>
+            <h2 class="section-title fade-up">About Me</h2>
+            <div class="about-content fade-up">
+                <p class="about-text">I am a former maritime professional transitioning into cybersecurity and IT. Skilled in navigation, operations, networking, and cybersecurity with a growing focus on AI and emerging technologies.</p>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title fade-up">Core Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
                     <h3>Networking & Network Security</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
                     <h3>Cybersecurity & Threat Management</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="300">
+                    <div class="skill-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
                     <h3>Linux & System Administration</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
                     <h3>Security & Disaster Recovery</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="500">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
                     <h3>Microsoft Office Suite</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="600">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
                     <h3>AI Fundamentals</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="700">
+                    <div class="skill-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
                     <h3>Risk Assessment & Compliance</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card fade-up" data-delay="800">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
                     <h3>Documentation & Records Management</h3>
                 </div>
             </div>
@@ -498,16 +109,22 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title fade-up">Professional Experience</h2>
             <div class="experience-grid">
-                <div class="experience-card">
+                <div class="experience-card fade-up" data-delay="100">
+                    <div class="experience-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
                     <h3>Deck Cadet</h3>
                     <div class="company">M/V Maule (Crewcare, Inc. / Allseas Marine S.A.)</div>
                     <div class="period">2014 – 2015</div>
                 </div>
-                <div class="experience-card">
+                <div class="experience-card fade-up" data-delay="200">
+                    <div class="experience-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
                     <h3>In-House Cadet Trainee</h3>
                     <div class="company">Crewcare, Inc.</div>
                     <div class="period">2014</div>
@@ -517,77 +134,122 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title fade-up">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card fade-up" data-delay="100">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
                     <h3>Security Audit Simulation</h3>
-                    <p>Risk assessment using PCI DSS, GDPR, and SOC standards. Identified security gaps and provided recommendations.</p>
-                    <a href="https://drive.google.com/drive/folders/1JGUK3UT4Eo5KccWfg5sJsXBhD0jzW0iI?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <p>Risk assessment using PCI DSS, GDPR, and SOC standards. Identified security gaps and provided comprehensive recommendations.</p>
+                    <a href="https://drive.google.com/drive/folders/1JGUK3UT4Eo5KccWfg5sJsXBhD0jzW0iI?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </a>
                 </div>
-                <div class="project-card">
+                <div class="project-card fade-up" data-delay="200">
+                    <div class="project-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
                     <h3>Linux File Permissions Management</h3>
-                    <p>Audited and secured Linux file permissions, enforcing least privilege and access control using CLI tools.</p>
-                    <a href="https://drive.google.com/drive/folders/1-idd-d4EhrxMznLutJSsUegmHWjDuGFU?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">View Project</a>
+                    <p>Audited and secured Linux file permissions, enforcing least privilege and access control using advanced CLI tools.</p>
+                    <a href="https://drive.google.com/drive/folders/1-idd-d4EhrxMznLutJSsUegmHWjDuGFU?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Certificates Section -->
-    <section id="certificates">
+    <section id="certificates" class="section">
         <div class="container">
-            <h2 class="section-title">Certificates</h2>
+            <h2 class="section-title fade-up">Certifications & Training</h2>
             <div class="certificates-list">
-                <div class="certificate-item">
+                <div class="certificate-item fade-up" data-delay="100">
+                    <div class="certificate-icon">
+                        <i class="fab fa-cisco"></i>
+                    </div>
                     <div class="certificate-info">
                         <h3>Cisco Junior Cybersecurity Career Path</h3>
                         <div class="period">2025 – Present</div>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1Hfgj6YLo3OF7ICGADpHsMh7CrEsPcR1M?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">View</a>
+                    <a href="https://drive.google.com/drive/folders/1Hfgj6YLo3OF7ICGADpHsMh7CrEsPcR1M?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
                 </div>
-                <div class="certificate-item">
+                <div class="certificate-item fade-up" data-delay="200">
+                    <div class="certificate-icon">
+                        <i class="fab fa-ibm"></i>
+                    </div>
                     <div class="certificate-info">
                         <h3>IBM SkillsBuild AI Fundamentals</h3>
                         <div class="period">2025 – Present</div>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1N4bAQsmlsmhpi7MXM4A4Vn_-26bQlaYb?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">View</a>
+                    <a href="https://drive.google.com/drive/folders/1N4bAQsmlsmhpi7MXM4A4Vn_-26bQlaYb?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
                 </div>
-                <div class="certificate-item">
+                <div class="certificate-item fade-up" data-delay="300">
+                    <div class="certificate-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
                     <div class="certificate-info">
                         <h3>Google Cybersecurity Specialization</h3>
                         <div class="period">In Progress</div>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/13ZvoXwClFq0WJ8DXpZ7iBFIBpEjLBmvc?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">View</a>
+                    <a href="https://drive.google.com/drive/folders/13ZvoXwClFq0WJ8DXpZ7iBFIBpEjLBmvc?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
                 </div>
-                <div class="certificate-item">
+                <div class="certificate-item fade-up" data-delay="400">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
                     <div class="certificate-info">
                         <h3>CSC Certification of Eligibility</h3>
                         <div class="period">2024 – Present</div>
                     </div>
-                    <a href="https://drive.google.com/file/d/1uEYNjoUUUDFtaXfmgWr-9pnT54pAC7tr/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">View</a>
+                    <a href="https://drive.google.com/file/d/1uEYNjoUUUDFtaXfmgWr-9pnT54pAC7tr/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="section">
         <div class="container">
-            <h2 class="section-title">Contact</h2>
+            <h2 class="section-title fade-up">Let's Connect</h2>
             <div class="contact-grid">
-                <div class="contact-item">
+                <div class="contact-item fade-up" data-delay="100">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
                     <h3>Email</h3>
                     <a href="mailto:thereal.jnjnbnd@gmail.com" class="contact-link">thereal.jnjnbnd@gmail.com</a>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item fade-up" data-delay="200">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
                     <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/rodolfo-a-a85945349" class="contact-link" target="_blank" rel="noopener noreferrer">linkedin.com/in/rodolfo-a-a85945349</a>
+                    <a href="https://linkedin.com/in/rodolfo-a-a85945349" class="contact-link" target="_blank" rel="noopener noreferrer">Connect with me</a>
                 </div>
-                <div class="contact-item">
+                <div class="contact-item fade-up" data-delay="300">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </div>
                     <h3>Messenger</h3>
-                    <a href="https://m.me/rodolfo.abando.7" class="contact-link" target="_blank" rel="noopener noreferrer">m.me/rodolfo.abando.7</a>
+                    <a href="https://m.me/rodolfo.abando.7" class="contact-link" target="_blank" rel="noopener noreferrer">Send message</a>
                 </div>
             </div>
         </div>
@@ -599,5 +261,7 @@
             <p>&copy; 2025 Rodolfo Laplana Abando Jr. | All Rights Reserved</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
