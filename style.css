@@ -658,3 +658,50 @@ body {
     width: auto;
     height: auto;
 }
+
+/* Add these styles to your existing style.css file */
+
+/* Enhanced Logo Styles */
+.cisco-logo,
+.ibm-logo {
+    width: 32px;
+    height: 24px;
+    fill: currentColor;
+    color: #00ffc8;
+}
+
+/* Ensure proper sizing for certificate icons */
+.certificate-icon {
+    font-size: 2rem;
+    color: #00ffc8;
+    min-width: 60px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.certificate-icon svg {
+    color: #00ffc8;
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for all certificate icons */
+.certificate-item:hover .certificate-icon svg,
+.certificate-item:hover .certificate-icon i {
+    color: #00ffc8;
+    transform: scale(1.1);
+}
+
+/* Ensure consistent icon sizing */
+.certificate-icon i.fab,
+.certificate-icon i.fas {
+    font-size: 2rem;
+}
+
+.certificate-icon .cisco-logo,
+.certificate-icon .ibm-logo {
+    width: 32px;
+    height: 24px;
+}
