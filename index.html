@@ -1,133 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rodolfo L. Abando Jr. - Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rodolfo Laplana Abando Jr. - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navbar -->
-  <header>
-    <nav>
-      <h1 class="logo">Rodolfo L. Abando Jr.</h1>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certificates">Certificates</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section id="hero">
-    <div class="hero-content">
-      <h2>Hello, I'm <span>Rodolfo</span></h2>
-      <p>Aspiring Cybersecurity Professional | Marine Transportation Graduate</p>
-      <a href="#contact" class="btn">Get in Touch</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am a graduate of Bachelor of Science in Marine Transportation who shifted interest towards technology, particularly in Cybersecurity, Networking, and Artificial Intelligence. 
-      I have experience as a deck cadet and now I am focusing on expanding my knowledge in IT, computer troubleshooting, Microsoft Office tools, and risk analysis.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="skills-container">
-      <div class="skill-card"><i class="fas fa-lock"></i><p>Cybersecurity Basics</p></div>
-      <div class="skill-card"><i class="fas fa-network-wired"></i><p>Networking</p></div>
-      <div class="skill-card"><i class="fas fa-terminal"></i><p>Linux & CLI</p></div>
-      <div class="skill-card"><i class="fas fa-file-alt"></i><p>Microsoft Office</p></div>
-      <div class="skill-card"><i class="fas fa-cogs"></i><p>Computer Troubleshooting</p></div>
-      <div class="skill-card"><i class="fas fa-shield-alt"></i><p>Risk Analysis</p></div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <i class="fas fa-globe"></i>
-        <h3>Portfolio Website</h3>
-        <p>Designed and developed a personal portfolio website showcasing my skills, projects, and certifications.</p>
-      </div>
-      <div class="project-card">
-        <i class="fas fa-user-shield"></i>
-        <h3>Cybersecurity Playbook</h3>
-        <p>Compiled strategies and notes on defensive cybersecurity techniques and incident response playbooks.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Certificates Section -->
-  <section id="certificates">
-    <h2>Certificates</h2>
-    <div class="certificates-container">
-
-      <!-- Cisco Certificate with inline SVG -->
-      <div class="certificate-card">
-        <div class="certificate-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="logo-icon">
-            <path fill="#00A1E0" d="M91 128h34v256H91zM387 128h34v256h-34zM227 64h34v384h-34zM283 128h34v256h-34zM171 192h34v128h-34zM339 192h34v128h-34z"/>
-          </svg>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content fade-up">
+            <h1 class="hero-title">Rodolfo Laplana Abando Jr.</h1>
+            <p class="hero-subtitle">Cybersecurity & Technology Enthusiast</p>
+            <p class="hero-intro">Former maritime professional transitioning into technology and cybersecurity.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-envelope"></i>
+                    Get In Touch
+                </a>
+            </div>
         </div>
-        <p>Cisco Certified Cybersecurity Essentials</p>
-      </div>
+    </section>
 
-      <!-- IBM Certificate with inline SVG -->
-      <div class="certificate-card">
-        <div class="certificate-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="logo-icon">
-            <path fill="#006699" d="M0 96h576v32H0zm0 64h576v32H0zm0 64h576v32H0zm0 64h576v32H0zm0 64h576v32H0zm0 64h576v32H0z"/>
-          </svg>
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">About Me</h2>
+            <div class="about-content fade-up">
+                <p class="about-text">I am a former maritime professional transitioning into cybersecurity and IT. Skilled in navigation, operations, networking, and cybersecurity with a growing focus on AI and emerging technologies.</p>
+            </div>
         </div>
-        <p>IBM Cybersecurity Analyst</p>
-      </div>
+    </section>
 
-      <!-- Google Certificate with Font Awesome -->
-      <div class="certificate-card">
-        <div class="certificate-icon">
-          <i class="fab fa-google"></i>
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card fade-up" data-delay="100">
+                    <div class="skill-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Networking & Network Security</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="200">
+                    <div class="skill-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cybersecurity & Threat Management</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="300">
+                    <div class="skill-icon">
+                        <i class="fab fa-linux"></i>
+                    </div>
+                    <h3>Linux & System Administration</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="400">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Security & Disaster Recovery</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="500">
+                    <div class="skill-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Office Suite</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="600">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Fundamentals</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="700">
+                    <div class="skill-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Risk Assessment & Compliance</h3>
+                </div>
+                <div class="skill-card fade-up" data-delay="800">
+                    <div class="skill-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Documentation & Records Management</h3>
+                </div>
+            </div>
         </div>
-        <p>Google IT Support Professional</p>
-      </div>
+    </section>
 
-      <!-- CSC Certificate with Font Awesome -->
-      <div class="certificate-card">
-        <div class="certificate-icon">
-          <i class="fas fa-certificate"></i>
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">Professional Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card fade-up" data-delay="100">
+                    <div class="experience-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Deck Cadet</h3>
+                    <div class="company">M/V Maule (Crewcare, Inc. / Allseas Marine S.A.)</div>
+                    <div class="period">2014 – 2015</div>
+                </div>
+                <div class="experience-card fade-up" data-delay="200">
+                    <div class="experience-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>In-House Cadet Trainee</h3>
+                    <div class="company">Crewcare, Inc.</div>
+                    <div class="period">2014</div>
+                </div>
+            </div>
         </div>
-        <p>Cybersecurity Certification (CSC)</p>
-      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-up" data-delay="100">
+                    <div class="project-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Security Audit Simulation</h3>
+                    <p>Risk assessment using PCI DSS, GDPR, and SOC standards. Identified security gaps and provided comprehensive recommendations.</p>
+                    <a href="https://drive.google.com/drive/folders/1JGUK3UT4Eo5KccWfg5sJsXBhD0jzW0iI?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </a>
+                </div>
+                <div class="project-card fade-up" data-delay="200">
+                    <div class="project-icon">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3>Linux File Permissions Management</h3>
+                    <p>Audited and secured Linux file permissions, enforcing least privilege and access control using advanced CLI tools.</p>
+                    <a href="https://drive.google.com/drive/folders/1-idd-d4EhrxMznLutJSsUegmHWjDuGFU?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View Project
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-container">
-      <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/yourprofile" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-      <a href="https://m.me/yourmessenger" target="_blank"><i class="fab fa-facebook-messenger"></i> Messenger</a>
-    </div>
-  </section>
+    <!-- Certificates Section -->
+    <section id="certificates" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">Certifications & Training</h2>
+            <div class="certificates-list">
+                <div class="certificate-item fade-up" data-delay="100">
+                    <div class="certificate-icon">
+                        <svg class="cisco-logo" viewBox="0 0 200 60" fill="currentColor">
+                            <path d="M12.5 15h10v5h-10v25h10v5H7.5V15h5zm25 0h15c8.3 0 15 6.7 15 15s-6.7 15-15 15h-15V15zm10 25h5c5.5 0 10-4.5 10-10s-4.5-10-10-10h-5v20zm35-25h15c8.3 0 15 6.7 15 15s-6.7 15-15 15h-15V15zm10 25h5c5.5 0 10-4.5 10-10s-4.5-10-10-10h-5v20zm35-15c0-8.3 6.7-15 15-15s15 6.7 15 15v20h-10V25c0-2.8-2.2-5-5-5s-5 2.2-5 5v20h-10V25zm40 0c0-8.3 6.7-15 15-15s15 6.7 15 15v20h-10V25c0-2.8-2.2-5-5-5s-5 2.2-5 5v20h-10V25z"/>
+                            <rect x="2" y="2" width="4" height="8" rx="2"/>
+                            <rect x="8" y="6" width="4" height="8" rx="2"/>
+                            <rect x="14" y="4" width="4" height="8" rx="2"/>
+                            <rect x="20" y="8" width="4" height="8" rx="2"/>
+                            <rect x="26" y="3" width="4" height="8" rx="2"/>
+                            <rect x="32" y="7" width="4" height="8" rx="2"/>
+                            <rect x="38" y="5" width="4" height="8" rx="2"/>
+                            <rect x="44" y="9" width="4" height="8" rx="2"/>
+                        </svg>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Cisco Junior Cybersecurity Career Path</h3>
+                        <div class="period">2025 – Present</div>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1Hfgj6YLo3OF7ICGADpHsMh7CrEsPcR1M?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
+                </div>
+                <div class="certificate-item fade-up" data-delay="200">
+                    <div class="certificate-icon">
+                        <svg class="ibm-logo" viewBox="0 0 200 60" fill="currentColor">
+                            <path d="M0 10h30v8H0v-8zm0 10h30v8H0v-8zm0 10h30v8H0v-8zm0 10h30v8H0v-8z"/>
+                            <path d="M35 10h45v8H35v-8zm0 10h45v8H35v-8zm0 10h45v8H35v-8zm0 10h45v8H35v-8z"/>
+                            <path d="M85 10h80v38H85V10z"/>
+                            <path d="M90 15h25v5H90v-5zm0 8h25v5H90v-5zm0 8h25v5H90v-5zm0 8h25v5H90v-5z"/>
+                            <path d="M125 15h25v5h-25v-5zm0 8h25v5h-25v-5zm0 8h25v5h-25v-5zm0 8h25v5h-25v-5z"/>
+                        </svg>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>IBM SkillsBuild AI Fundamentals</h3>
+                        <div class="period">2025 – Present</div>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1N4bAQsmlsmhpi7MXM4A4Vn_-26bQlaYb?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
+                </div>
+                <div class="certificate-item fade-up" data-delay="300">
+                    <div class="certificate-icon">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Google Cybersecurity Specialization</h3>
+                        <div class="period">In Progress</div>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/13ZvoXwClFq0WJ8DXpZ7iBFIBpEjLBmvc?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
+                </div>
+                <div class="certificate-item fade-up" data-delay="400">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>CSC Certification of Eligibility</h3>
+                        <div class="period">2024 – Present</div>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1uEYNjoUUUDFtaXfmgWr-9pnT54pAC7tr/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-external-link-alt"></i>
+                        View
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Rodolfo L. Abando Jr. | All Rights Reserved</p>
-  </footer>
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title fade-up">Let's Connect</h2>
+            <div class="contact-grid">
+                <div class="contact-item fade-up" data-delay="100">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:thereal.jnjnbnd@gmail.com" class="contact-link">thereal.jnjnbnd@gmail.com</a>
+                </div>
+                <div class="contact-item fade-up" data-delay="200">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <a href="https://linkedin.com/in/rodolfo-a-a85945349" class="contact-link" target="_blank" rel="noopener noreferrer">Connect with me</a>
+                </div>
+                <div class="contact-item fade-up" data-delay="300">
+                    <div class="contact-icon">
+                        <i class="fab fa-facebook-messenger"></i>
+                    </div>
+                    <h3>Messenger</h3>
+                    <a href="https://m.me/rodolfo.abando.7" class="contact-link" target="_blank" rel="noopener noreferrer">Send message</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Rodolfo Laplana Abando Jr. | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
