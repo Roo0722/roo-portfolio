@@ -28,4 +28,4 @@ The project began with a core concept and is now refined into a more granular pr
 
 This unique workflow demonstrates how a more deliberate, multi-step prompting strategy can lead to a demonstrably better result by providing a higher level of detail and control at each stage of the development process.
 
-Check out my portfolio [here](https://roo0722.github.io/roo-portfolio/).
+Check out the result [here](https://roo0722.github.io/roo-portfolio/).
