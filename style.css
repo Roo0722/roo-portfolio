@@ -614,3 +614,15 @@ body {
         padding: 0 1rem;
     }
 }
+    /* SVG logos styled like Font Awesome icons */
+    .logo-icon {
+        width: 40px;
+        height: auto;
+        fill: #00ffc8; /* match your neon green */
+        transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+    .logo-icon:hover {
+        transform: scale(1.1);
+        fill: #00ffea; /* lighter neon on hover */
+}
