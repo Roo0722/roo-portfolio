@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodolfo Laplana Abando Jr. - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Rodolfo Laplana Abando Jr. - Cybersecurity & Technology Enthusiast Portfolio">
+    <meta property="og:title" content="Rodolfo Laplana Abando Jr. Portfolio">
+    <meta property="og:description" content="Showcasing skills and projects in cybersecurity, networking, and technology.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <title>Rodolfo Laplana Abando Jr.</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
-            <ul class="nav-links">
+            <ul class="nav-links" role="list">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -22,287 +23,224 @@
                 <li><a href="#certificates" class="nav-link">Certificates</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
+    <section id="hero" class="hero">
         <div class="hero-glow"></div>
-        <div class="hero-content fade-up">
-            <h1 class="hero-title">Rodolfo Laplana Abando Jr.</h1>
-            <p class="hero-subtitle">Cybersecurity & Technology Enthusiast</p>
-            <p class="hero-intro">Former maritime professional transitioning into technology and cybersecurity.</p>
-            <div class="hero-cta">
-                <a href="#contact" class="cta-button">
-                    <i class="fas fa-envelope"></i>
-                    Get In Touch
-                </a>
+        <div class="hero-content">
+            <h1 class="hero-title fade-up">Rodolfo Laplana Abando Jr.</h1>
+            <h2 class="hero-subtitle fade-up" data-delay="200">Cybersecurity & Technology Enthusiast</h2>
+            <p class="hero-intro fade-up" data-delay="400">Former maritime professional transitioning into technology and cybersecurity.</p>
+            <div class="hero-cta fade-up" data-delay="600">
+                <a href="#contact" class="cta-button">Get In Touch</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
             <h2 class="section-title fade-up">About Me</h2>
-            <div class="about-content fade-up">
-                <p class="about-text">I am a former maritime professional transitioning into cybersecurity and IT. Skilled in navigation, operations, networking, and cybersecurity with a growing focus on AI and emerging technologies.</p>
+            <div class="about-content">
+                <p class="about-text fade-up" data-delay="200">I am a former maritime professional transitioning into cybersecurity and IT. Skilled in navigation, operations, networking, and cybersecurity with a growing focus on AI and emerging technologies.</p>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="section">
         <div class="container">
             <h2 class="section-title fade-up">Core Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card fade-up" data-delay="100">
-                    <div class="skill-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="200">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path>
+                        <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                    </svg>
                     <h3>Networking & Network Security</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="200">
-                    <div class="skill-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="300">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 20a8 8 0 0 0 8-8c0-1.5-.5-3-1.4-4.2"></path>
+                        <path d="M12 14a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2"></path>
+                    </svg>
                     <h3>Cybersecurity & Threat Management</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="300">
-                    <div class="skill-icon">
-                        <i class="fab fa-linux"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="400">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                    </svg>
                     <h3>Linux & System Administration</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="400">
-                    <div class="skill-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="500">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a10 10 0 0 0-10 10v8l4-4h6a10 10 0 0 0 10-10"></path>
+                    </svg>
                     <h3>Security & Disaster Recovery</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="500">
-                    <div class="skill-icon">
-                        <i class="fab fa-microsoft"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="600">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    </svg>
                     <h3>Microsoft Office Suite</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="600">
-                    <div class="skill-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="700">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M12 16v.01"></path>
+                    </svg>
                     <h3>AI Fundamentals</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="700">
-                    <div class="skill-icon">
-                        <i class="fas fa-clipboard-check"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="800">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h20"></path>
+                        <path d="M4 8h16"></path>
+                    </svg>
                     <h3>Risk Assessment & Compliance</h3>
                 </div>
-                <div class="skill-card fade-up" data-delay="800">
-                    <div class="skill-icon">
-                        <i class="fas fa-file-alt"></i>
-                    </div>
+                <div class="skill-card fade-up" data-delay="900">
+                    <svg class="skill-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 7h14v12H5z"></path>
+                    </svg>
                     <h3>Documentation & Records Management</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
             <h2 class="section-title fade-up">Professional Experience</h2>
             <div class="experience-grid">
-                <div class="experience-card fade-up" data-delay="100">
-                    <div class="experience-icon">
-                        <i class="fas fa-ship"></i>
-                    </div>
-                    <h3>Deck Cadet</h3>
-                    <div class="company">M/V Maule (Crewcare, Inc. / Allseas Marine S.A.)</div>
-                    <div class="period">2014 – 2015</div>
-                </div>
                 <div class="experience-card fade-up" data-delay="200">
-                    <div class="experience-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
+                    <svg class="experience-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20"></path>
+                        <path d="M2 10h20"></path>
+                    </svg>
+                    <h3>Deck Cadet</h3>
+                    <p class="company">M/V Maule (Crewcare, Inc. / Allseas Marine S.A.)</p>
+                    <p class="period">2014 – 2015</p>
+                </div>
+                <div class="experience-card fade-up" data-delay="300">
+                    <svg class="experience-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20"></path>
+                        <path d="M2 10h20"></path>
+                    </svg>
                     <h3>In-House Cadet Trainee</h3>
-                    <div class="company">Crewcare, Inc.</div>
-                    <div class="period">2014</div>
+                    <p class="company">Crewcare, Inc.</p>
+                    <p class="period">2014</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section">
         <div class="container">
             <h2 class="section-title fade-up">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card fade-up" data-delay="100">
-                    <div class="project-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
+                <div class="project-card fade-up" data-delay="200">
+                    <svg class="project-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2a10 10 0 0 0-10 10v8l4-4h6a10 10 0 0 0 10-10"></path>
+                    </svg>
                     <h3>Security Audit Simulation</h3>
                     <p>Risk assessment using PCI DSS, GDPR, and SOC standards. Identified security gaps and provided comprehensive recommendations.</p>
-                    <a href="https://drive.google.com/drive/folders/1JGUK3UT4Eo5KccWfg5sJsXBhD0jzW0iI?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View Project
-                    </a>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
-                <div class="project-card fade-up" data-delay="200">
-                    <div class="project-icon">
-                        <i class="fas fa-terminal"></i>
-                    </div>
+                <div class="project-card fade-up" data-delay="300">
+                    <svg class="project-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 7h14v12H5z"></path>
+                    </svg>
                     <h3>Linux File Permissions Management</h3>
                     <p>Audited and secured Linux file permissions, enforcing least privilege and access control using advanced CLI tools.</p>
-                    <a href="https://drive.google.com/drive/folders/1-idd-d4EhrxMznLutJSsUegmHWjDuGFU?usp=drive_link" class="project-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View Project
-                    </a>
+                    <a href="#" class="project-link">View Project</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Certificates Section -->
     <section id="certificates" class="section">
         <div class="container">
             <h2 class="section-title fade-up">Certifications & Training</h2>
             <div class="certificates-list">
-                <div class="certificate-item fade-up" data-delay="100">
-                    <div class="certificate-icon">
-                        <svg class="cisco-logo" viewBox="0 0 100 50" fill="currentColor">
-                            <!-- Cisco Bridge/Signal Logo -->
-                            <rect x="8" y="35" width="4" height="12" rx="2"/>
-                            <rect x="16" y="30" width="4" height="17" rx="2"/>
-                            <rect x="24" y="25" width="4" height="22" rx="2"/>
-                            <rect x="32" y="20" width="4" height="27" rx="2"/>
-                            <rect x="40" y="15" width="4" height="32" rx="2"/>
-                            <rect x="48" y="20" width="4" height="27" rx="2"/>
-                            <rect x="56" y="25" width="4" height="22" rx="2"/>
-                            <rect x="64" y="30" width="4" height="17" rx="2"/>
-                            <rect x="72" y="35" width="4" height="12" rx="2"/>
-                            <rect x="80" y="38" width="4" height="9" rx="2"/>
-                        </svg>
-                    </div>
+                <div class="certificate-item fade-up" data-delay="200">
+                    <svg class="certificate-icon cisco-logo" width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18"></path>
+                    </svg>
                     <div class="certificate-info">
                         <h3>Cisco Junior Cybersecurity Career Path</h3>
-                        <div class="period">2025 – Present</div>
+                        <p class="period">2025 – Present</p>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/1Hfgj6YLo3OF7ICGADpHsMh7CrEsPcR1M?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View
-                    </a>
-                </div>
-                <div class="certificate-item fade-up" data-delay="200">
-                    <div class="certificate-icon">
-                        <svg class="ibm-logo" viewBox="0 0 100 50" fill="currentColor">
-                            <!-- IBM Striped Logo -->
-                            <g>
-                                <!-- Top I -->
-                                <rect x="10" y="8" width="15" height="4"/>
-                                <rect x="10" y="14" width="15" height="4"/>
-                                <rect x="10" y="20" width="15" height="4"/>
-                                <rect x="10" y="26" width="15" height="4"/>
-                                <rect x="10" y="32" width="15" height="4"/>
-                                <rect x="10" y="38" width="15" height="4"/>
-                                
-                                <!-- B -->
-                                <rect x="30" y="8" width="4" height="34"/>
-                                <rect x="34" y="8" width="15" height="4"/>
-                                <rect x="34" y="14" width="15" height="4"/>
-                                <rect x="34" y="20" width="15" height="4"/>
-                                <rect x="34" y="26" width="15" height="4"/>
-                                <rect x="34" y="32" width="15" height="4"/>
-                                <rect x="34" y="38" width="15" height="4"/>
-                                <rect x="49" y="8" width="4" height="12"/>
-                                <rect x="49" y="30" width="4" height="12"/>
-                                
-                                <!-- M -->
-                                <rect x="55" y="8" width="4" height="34"/>
-                                <rect x="59" y="8" width="8" height="4"/>
-                                <rect x="63" y="14" width="4" height="8"/>
-                                <rect x="67" y="8" width="8" height="4"/>
-                                <rect x="75" y="8" width="4" height="34"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="certificate-info">
-                        <h3>IBM SkillsBuild AI Fundamentals</h3>
-                        <div class="period">2025 – Present</div>
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/1N4bAQsmlsmhpi7MXM4A4Vn_-26bQlaYb?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View
-                    </a>
+                    <a href="#" class="certificate-link">View</a>
                 </div>
                 <div class="certificate-item fade-up" data-delay="300">
-                    <div class="certificate-icon">
-                        <i class="fab fa-google"></i>
-                    </div>
+                    <svg class="certificate-icon ibm-logo" width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18"></path>
+                    </svg>
                     <div class="certificate-info">
-                        <h3>Google Cybersecurity Specialization</h3>
-                        <div class="period">In Progress</div>
+                        <h3>IBM SkillsBuild AI Fundamentals</h3>
+                        <p class="period">2025 – Present</p>
                     </div>
-                    <a href="https://drive.google.com/drive/folders/13ZvoXwClFq0WJ8DXpZ7iBFIBpEjLBmvc?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View
-                    </a>
+                    <a href="#" class="certificate-link">View</a>
                 </div>
                 <div class="certificate-item fade-up" data-delay="400">
-                    <div class="certificate-icon">
-                        <i class="fas fa-certificate"></i>
+                    <svg class="certificate-icon" width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18"></path>
+                    </svg>
+                    <div class="certificate-info">
+                        <h3>Google Cybersecurity Specialization</h3>
+                        <p class="period">In Progress</p>
                     </div>
+                    <a href="#" class="certificate-link">View</a>
+                </div>
+                <div class="certificate-item fade-up" data-delay="500">
+                    <svg class="certificate-icon" width="32" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 12h18"></path>
+                    </svg>
                     <div class="certificate-info">
                         <h3>CSC Certification of Eligibility</h3>
-                        <div class="period">2024 – Present</div>
+                        <p class="period">2024 – Present</p>
                     </div>
-                    <a href="https://drive.google.com/file/d/1uEYNjoUUUDFtaXfmgWr-9pnT54pAC7tr/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer">
-                        <i class="fas fa-external-link-alt"></i>
-                        View
-                    </a>
+                    <a href="#" class="certificate-link">View</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="section">
         <div class="container">
             <h2 class="section-title fade-up">Let's Connect</h2>
             <div class="contact-grid">
-                <div class="contact-item fade-up" data-delay="100">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
+                <div class="contact-item fade-up" data-delay="200">
+                    <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16v12H4z"></path>
+                        <path d="M4 8l8 5 8-5"></path>
+                    </svg>
                     <h3>Email</h3>
                     <a href="mailto:rdlfbndjr1014@duck.com" class="contact-link">rdlfbndjr1014@duck.com</a>
                 </div>
-                <div class="contact-item fade-up" data-delay="200">
-                    <div class="contact-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                    <h3>LinkedIn</h3>
-                    <a href="https://linkedin.com/in/rodolfo-a-a85945349" class="contact-link" target="_blank" rel="noopener noreferrer">Connect with me</a>
-                </div>
                 <div class="contact-item fade-up" data-delay="300">
-                    <div class="contact-icon">
-                        <i class="fab fa-facebook-messenger"></i>
-                    </div>
+                    <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v7H2v-7a6 6 0 0 1 6-6h8z"></path>
+                    </svg>
+                    <h3>LinkedIn</h3>
+                    <a href="#" class="contact-link">Connect with me</a>
+                </div>
+                <div class="contact-item fade-up" data-delay="400">
+                    <svg class="contact-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
                     <h3>Messenger</h3>
-                    <a href="https://m.me/rodolfo.abando.7" class="contact-link" target="_blank" rel="noopener noreferrer">Send message</a>
+                    <a href="#" class="contact-link">Send message</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Rodolfo Laplana Abando Jr. | All Rights Reserved</p>
-        </div>
+        <p>© 2025 Rodolfo Laplana Abando Jr. | All Rights Reserved</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
