@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Theme Toggle
+    // Theme Toggle (Force dark mode by default)
     const themeToggle = document.getElementById('theme-toggle');
     const setTheme = (theme) => {
         document.body.classList.toggle('light-theme', theme === 'light');
@@ -95,8 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', theme);
     };
 
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
+    // Force dark theme on load, allow toggle
+    setTheme('dark');
 
     themeToggle.addEventListener('click', () => {
         const currentTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
