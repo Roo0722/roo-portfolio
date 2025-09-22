@@ -1,26 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Utility: Debounce function
-    const debounce = (func, wait) => {
-        let timeout;
-        return (...args) => {
-            clearTimeout(timeout);
-            timeout = setTimeout(() => func.apply(this, args), wait);
-        };
-    };
-
-    // Scroll Spy
+// Scroll Spy and Animations
+document.addEventListener('DOMContentLoaded', function() {
+    // Scroll spy for navigation
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    const updateActiveNav = () => {
+    function updateActiveNav() {
         let current = '';
+        
         sections.forEach(section => {
-            if (section && section.getAttribute('id')) {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (window.pageYOffset >= sectionTop - 200) {
-                    current = section.getAttribute('id');
-                }
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
             }
         });
 
@@ -30,36 +21,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 link.classList.add('active');
             }
         });
-    };
+    }
 
-    // Intersection Observer for Animations
-    const fadeElements = document.querySelectorAll('.fade-up');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const element = entry.target;
+    // Scroll animations
+    function animateOnScroll() {
+        const fadeElements = document.querySelectorAll('.fade-up');
+        
+        fadeElements.forEach((element, index) => {
+            const elementTop = element.getBoundingClientRect().top;
+            const elementVisible = 150;
+            
+            if (elementTop < window.innerHeight - elementVisible) {
                 const delay = element.dataset.delay || 0;
+                
                 setTimeout(() => {
                     element.classList.add('animate');
                 }, delay);
-                observer.unobserve(element);
             }
         });
-    }, { threshold: 0.1 });
-
-    fadeElements.forEach(element => observer.observe(element));
+    }
 
     // Initial animation for hero section
     setTimeout(() => {
         const heroElements = document.querySelectorAll('.hero .fade-up');
-        heroElements.forEach(element => element.classList.add('animate'));
+        heroElements.forEach(element => {
+            element.classList.add('animate');
+        });
     }, 300);
 
-    // Smooth scrolling
+    // Smooth scrolling for navigation links
     navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            const targetId = link.getAttribute('href');
+            const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
@@ -68,47 +62,27 @@ document.addEventListener('DOMContentLoaded', () => {
                     top: offsetTop,
                     behavior: 'smooth'
                 });
-                targetSection.focus({ preventScroll: true });
-                if (document.activeElement !== targetSection) {
-                    targetSection.setAttribute('tabindex', '-1');
-                    targetSection.focus();
-                }
             }
         });
     });
 
-    // Navbar background on scroll
-    const updateNavbar = () => {
-        const navbar = document.getElementById('navbar');
-        if (navbar) {
-            navbar.style.backgroundColor = window.scrollY > 50 
-                ? 'rgba(17, 17, 17, 0.98)' 
-                : 'rgba(17, 17, 17, 0.95)';
-        }
-    };
-
-    // Theme Toggle (Force dark mode by default)
-    const themeToggle = document.getElementById('theme-toggle');
-    const setTheme = (theme) => {
-        document.body.classList.toggle('light-theme', theme === 'light');
-        themeToggle.textContent = theme === 'light' ? '🌙' : '☀️';
-        localStorage.setItem('theme', theme);
-    };
-
-    // Force dark theme on load, allow toggle
-    setTheme('dark');
-
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = document.body.classList.contains('light-theme') ? 'dark' : 'light';
-        setTheme(currentTheme);
-    });
-
     // Event listeners
-    window.addEventListener('scroll', debounce(() => {
+    window.addEventListener('scroll', function() {
         updateActiveNav();
-        updateNavbar();
-    }, 10));
+        animateOnScroll();
+    });
 
     // Initial calls
     updateActiveNav();
+    animateOnScroll();
+
+    // Navbar background on scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = 'rgba(17, 17, 17, 0.98)';
+        } else {
+            navbar.style.backgroundColor = 'rgba(17, 17, 17, 0.95)';
+        }
+    });
 });
